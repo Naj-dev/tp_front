@@ -1,0 +1,198 @@
+/********** BODY **********/
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #333 url(https://static.tumblr.com/maopbtg/a5emgtoju/inflicted.png) repeat;
+    color: #FA7500;
+    font-size: 1.5rem;
+}
+
+/********** HEADER **********/
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1vh;
+}
+
+/***** H1 *****/
+
+h1 {
+    width: 30vw;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0px 2px 14px rgb(40, 245, 37);
+}
+
+
+/********** FIRST SECTION **********/
+
+/** FIRST AND SECOND CONTAINER **/
+
+.firstAndSecondBlockContainer {
+    display: flex;
+    justify-content: space-around;
+    height: 72vh;
+    width: 100%;
+}
+
+.firstBlockDiv,
+.secondBlockDiv {
+    height: 50vh;
+    width: 40vw;
+}
+
+/** SELECT NUMBER OF CHARACTERES **/
+
+#select {
+    width: 15%;
+    text-align: center;
+    background-color: rgb(40, 245, 37);
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 1vh;
+}
+
+.selectWithLabel {
+
+    height: 10vh;
+    width: 40vw;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 12px;
+    box-shadow: 0px 2px 14px rgb(40, 245, 37);
+}
+
+/** TWO WRITING BLOCS **/
+
+.textarea,
+.secondWritingBox {
+
+    height: 50vh;
+    width: 40vw;
+    overflow-wrap: break-word;
+    color: #222;
+    font-family: Courier, monospace;
+    font-size: 1.5rem;
+    resize: none;
+    line-height: 2.5rem;
+    background-image: url(https://static.tumblr.com/maopbtg/E9Bmgtoht/lines.png), url(https://static.tumblr.com/maopbtg/nBUmgtogx/paper.png);
+    border-radius: 12px;
+    box-shadow: 0px 2px 14px #FA7500;
+}
+
+/** COUNTER **/
+
+.counterContainer {
+
+    height: 10vh;
+    width: 40vw;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 12px;
+    box-shadow: 0px 2px 14px rgb(40, 245, 37);
+
+}
+
+#counter {
+    font-size: 1.5rem;
+    margin-top: 1vh;
+}
+
+.remainingCharacter {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+
+/********** SECOND SECTION **********/
+
+/** PROGRESS BAR **/
+
+.progressBarContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.labelWithProgress {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 10vh;
+    border-radius: 12px;
+    box-shadow: 0px 2px 14px rgb(40, 245, 37);
+}
+
+
+label {
+    text-transform: uppercase;
+    color: #FA7500;
+}
+
+progress {
+    border-radius: 7px;
+    width: 60vw;
+    height: 3vh;
+    margin: 0 2vw;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #DEDEDE;
+    border-radius: 7px;
+}
+
+/** PROGRESS BAR COLOR **/
+
+/* progress::-webkit-progress-value {
+    background-color: green;
+    border-radius: 7px;
+    box-shadow: 1px 1px 5px 3px #2F1413;
+} */
+
+.progressGreen::-webkit-progress-value {
+    background-color: green;
+    border-radius: 7px;
+    box-shadow: 1px 1px 5px 3px #2F1413;
+}
+
+.progressOrange::-webkit-progress-value {
+    background-color: orange;
+    border-radius: 7px;
+    box-shadow: 1px 1px 5px 3px #2F1413;
+}
+
+.progressRed::-webkit-progress-value {
+    background-color: red;
+    border-radius: 7px;
+    box-shadow: 1px 1px 5px 3px #2F1413;
+}
+
+.progressBar {
+    width: 5vw;
+}
+
+/** CURSOR CHANGE **/
+
+#secondWritingBox {
+    cursor: url("img/interdit.png"), auto;
+}
+
+#textarea {
+    cursor: url("img/writing.png"), auto;
+
+}

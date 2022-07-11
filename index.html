@@ -9,10 +9,91 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+
+<!----------BODY---------->
+
 <body>
 
-    <script type="text/javascript" src="main.js"></script>
+    <!----------HEADER---------->
+    <header>
 
+        <div class="headerContainer">
+            <h1>Editor HTML & CSS</h1>
+        </div>
+
+    </header>
+
+    <!----------FIRST SECTION---------->
+
+    <section>
+
+        <div class="firstAndSecondBlockContainer">
+
+            <!--LEFT BLOCK-->
+            <div class="firstBlockDiv">
+
+                <!--FORM-->
+                <form method="get" action="" id="form" class="form">
+
+                    <!--TEXTAREA-->
+                    <textarea name="textarea" id="textarea" class="textarea" placeholder="Write your code here..."
+                        maxlength="200" autofocus></textarea>
+
+                    <div class="selectWithLabel">
+                        <label for="select">Change the maximum number of characters allowed :</label>
+
+                        <!--SELECT MAX NB OF CHARS-->
+                        <select name="select" id="select">
+                            <option value="200">200</option>
+                            <option value="300">300</option>
+                            <option value="500">500</option>
+                            <option value="1000">1000</option>
+                            <option value="2000">2000</option>
+                        </select>
+                    </div>
+
+                </form>
+            </div>
+
+
+            <!--RIGHT BLOCK-->
+            <div class="secondBlockDiv">
+
+                <!--RESULT OF TEXTAREA-->
+                <div class="secondWritingBox" id="secondWritingBox"></div>
+
+                <!--counter-->
+                <div class="counterContainer">
+                    <p class="remainingCharacter">Number of used characters remaining :</p>
+                    <div id="counter">200</div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!----------SECOND SECTION---------->
+    <section>
+
+
+        <!-- PROGRESS BAR -->
+        <div class="progressBarContainer">
+
+            <div class="labelWithProgress">
+                <label for="bar">Characters used :</label>
+
+                <progress id="bar" max="100" value="0"> </progress>
+
+                <div class="progressBar"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LINK JS-->
+    <script type="text/javascript" src="main.js"></script>
 </body>
 
 </html>
