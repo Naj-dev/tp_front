@@ -1,50 +1,63 @@
 /*****GLOBALS VAR *****/
 
-let counter = document.getElementById('counter');
+const counter = document.getElementById('counter');
+const firstBlocText = document.getElementById('textarea');
+const secondBlocText = document.getElementById('secondWritingBox');
+const progressBar = document.querySelector('.progressBar');
+const btnBold = document.getElementById('btn_bold');
+const btnItalic = document.getElementById('btn_italic');
+const btnUppercase = document.getElementById('btn_uppercase');
+
+
 let maxLengthAttribute = parseInt(document.getElementById("textarea").getAttribute("maxlength"));
-let firstBlocText = document.getElementById('textarea');
-let secondBlocText = document.getElementById('secondWritingBox');
-let progressBar = document.querySelector('.progressBar');
+let select = document.getElementById("select");
+let selectedValue = "";
 
 
 
 
 /******************** COPY THE FIRST TEXTAREA ON THE SECOND ********************/
 
-firstBlocText.addEventListener("keyup", (e) => { secondBlocText.value = e.target.value });
+firstBlocText.addEventListener("keyup", (e) => {
+
+
+    secondBlocText.innerHTML = e.target.value
+
+
+});
 
 
 /******************** CHANGE MAXLENGTH ********************/
 
 
-let select = document.getElementById("select");
-let selectedValue = "";
-
 select.addEventListener("change", (e) => {
 
-    selectedValue, maxLengthAttribute = e.target.value;
-    counter.innerHTML = e.target.value;
+
+    selectedValue = e.target.value;
+
+    maxLengthAttribute = e.target.value;
+    counter.innerHTML = e.target.value - secondBlocText.innerText.length;
+
     firstBlocText.setAttribute('maxlength', maxLengthAttribute);
 
 })
 
 /******************** COUNTER ********************/
 
-
 firstBlocText.addEventListener("keyup", (e) => {
+
 
     if (e.target.value != "") {
 
-        console.log(e.target.value)
 
-        counter.innerHTML = secondBlocText.innerHTML.length;
-        counter.innerHTML = maxLengthAttribute - counter.innerHTML;
+        counter.innerHTML = maxLengthAttribute - secondBlocText.innerText.length;
 
     } else {
 
         counter.innerHTML = maxLengthAttribute;
 
     }
+
 });
 
 
@@ -58,7 +71,6 @@ let percentage = 0;
 
 firstBlocText.addEventListener("keyup", () => {
 
-    console.log(firstBlocText.innerHTML.value)
     secondBlocTextLength = secondBlocText.innerHTML.length;
     percentage = parseInt((secondBlocTextLength / maxLengthAttribute) * 100);
     bar.value = percentage;
@@ -86,14 +98,15 @@ firstBlocText.addEventListener("keyup", () => {
 
 });
 
-// secondBlocText.addEventListener("change", (e) => {
+/***** BUTTON *****/
+// let bold = "<bold>"
 
-//     console.log(e)
+btnBold.addEventListener("click", (e) => {
 
-// })
+    let bold = "<bold>"
 
+    firstBlocText.innerHTML = firstBlocText.innerHTML + bold;
 
+});
 
-
-
-
+// console.log(e.target.innerText.length)
